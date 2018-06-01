@@ -6,13 +6,19 @@ var crystalArray = [];
 
 
 // start game
+document.onkeyup = function () {
 newCrystals();
 console.log(crystalArray);
 
+}
 // Functions
 
 function crystalClick() {
     playerTotal += crystalValue;
+}
+
+function win() {
+    
 }
 
 function newCrystals() {
