@@ -6,42 +6,33 @@ var crystalArray = [];
 
 document.onkeyup = function () { // start game
     newCrystals();
-    console.log('Crystal 1: ' + $('#crystal-1').val());
     console.log(crystalArray);
     $('#goalTotal').text(goalNumber);
     $('#playerTotal').text(0);
     
-    if (playerTotal < goalNumber) {
-        $('.crystal').on('click', crystalClick);
-        $('#playerTotal').text(playerTotal);
-    }
-    if (playerTotal === goalNumber) {
-        playerWin;
-    } else {
-        playerLose;
-    };
+    $('.crystal').on('click', function() {
+        if (playerTotal < goalNumber) {
+            var crystal = parseInt($(this).val());
+            crystalClick(crystal);
+            $('#playerTotal').text(playerTotal);
+            console.log(playerTotal < goalNumber)
+            if (playerTotal === goalNumber) {
+                alert(`You Win!`);
+                newCrystals();
+            } 
+            else if (playerTotal > goalNumber) {
+                alert(`You Lose!`);
+                newCrystals();
+            }
+        }
+    });
 };
 
 // Functions
 
-function crystalClick() {
-    console.log('Crystal ID is ' + $(this).attr('id'))
-    playerTotal += parseInt($(this).val());
+function crystalClick(v) {
+    playerTotal += v;
     $('#playerTotal').text(playerTotal);
-};
-
-function playerWin() {
-    console.log(`You Win!`);
-    newCrystals();
-};
-
-function playerLose() {
-    console.log(`You Lose!`);
-    newCrystals();
-};
-
-function win() {
-
 };
 
 function newCrystals() {
