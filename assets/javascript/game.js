@@ -4,7 +4,7 @@ var wins = 0;
 var losses = 0;
 var crystalArray = [];
 
-document.onkeyup = function () { // start game
+window.onload = function () { // start game
     newCrystals();
     console.log(crystalArray);
     $('#goalTotal').text(goalNumber);
@@ -13,6 +13,7 @@ document.onkeyup = function () { // start game
     $('.crystal').on('click', function() {
         if (playerTotal < goalNumber) {
             var crystal = parseInt($(this).val());
+            console.log($(this).val());
             crystalClick(crystal);
             $('#playerTotal').text(playerTotal);
             console.log(playerTotal < goalNumber)

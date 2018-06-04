@@ -7,13 +7,20 @@
     <title>Crystal Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
     <script src="./assets/javascript/game.js"></script>
 </head>
 
-<body>
+<body class="subtitle">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Jesse Loftus</a>
@@ -35,45 +42,39 @@
     <!-- Content -->
     <content>
         <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-sm-2 h4">wins</div>
+                <div id="gameTotals" class="col-sm-8 justify-content-center">
+                    <span id="playerTotal" class="h2"></span> <h3>/</h3> <span id="goalTotal" class="h2"></span>
+                </div>
+                <div class="col-sm-2 h4">losses</div>
+            </div>
             <div class="row justify-content-center">
-                <div class="col-sm-2">wins</div>
-                <div id="gameTotals" class="col-sm-8">
-                    <span id="playerTotal"></span> /
-                    <span id="goalTotal"></span>
-                </div>
-                <div class="col-sm-2">losses</div>
-            </div>
-            <div class="row">
                 <div class="d-flex flex-row flex-wrap">
-                    <button id="crystal-1" class="button crystal" value="">
-                        <img class="img-fluid" src="./assets/images/baseCrystal.PNG" alt="picture of crystal-1">
+                    <button id="crystal-1" class="btn crystal shadowed" value="">
+                        <img class="img-fluid" src="./assets/images/Crystal-1.png" alt="picture of crystal-1">
                     </button>
-                    <button id="crystal-2" class="button crystal" value="">
-                        <img class="img-fluid" src="./assets/images/baseCrystal.PNG" alt="picture of crystal-2">
+                    <button id="crystal-2" class="btn crystal shadowed" value="">
+                        <img class="img-fluid" src="./assets/images/Crystal-2.png" alt="picture of crystal-2">
                     </button>
-                    <button id="crystal-3" class="button crystal" value="">
-                        <img class="img-fluid" src="./assets/images/baseCrystal.PNG" alt="picture of crystal-3">
+                    <button id="crystal-3" class="btn crystal shadowed" value="">
+                        <img class="img-fluid" src="./assets/images/Crystal-3.png" alt="picture of crystal-3">
                     </button>
-                    <button id="crystal-4" class="button crystal" value="">
-                        <img class="img-fluid" src="./assets/images/baseCrystal.PNG" alt="picture of crystal-4">
+                    <button id="crystal-4" class="btn crystal shadowed" value="">
+                        <img class="img-fluid" src="./assets/images/Crystal-4.png" alt="picture of crystal-4">
                     </button>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="">
-                    <button id="startGame" class="button startGame"></button>
+                    <button id="startGame" class="btn btn-primary startGame">Start Game</button>
                 </div>
             </div>
         </div>
     </content>
     <!-- Footer -->
     <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
