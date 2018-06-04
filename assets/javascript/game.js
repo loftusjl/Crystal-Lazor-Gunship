@@ -4,25 +4,30 @@ var wins = 0;
 var losses = 0;
 var crystalArray = [];
 
+document.onkeyup = function () { // start game
+    newCrystals();
+    console.log('Crystal 1: ' + $('#crystal-1').val());
+    console.log(crystalArray);
+    $('#goalTotal').text(goalNumber);
+    $('#playerTotal').text(0);
+    
+    if (playerTotal < goalNumber) {
+        $('.crystal').on('click', crystalClick);
+        $('#playerTotal').text(playerTotal);
+    }
+    if (playerTotal === goalNumber) {
+        playerWin;
+    } else {
+        playerLose;
+    };
+};
 
-// start game
-document.onkeyup = function () {
-newCrystals();
-console.log(crystalArray);
-
-while (playerTotal < goalNumber) {
-    $('.crystal').on('click', crystalClick);
-}
-if (playerTotal === goalNumber) {
-    playerWin;
-} else {
-    playerLose;
-}
 // Functions
 
 function crystalClick() {
-    let crystalValue = $(this).val()
-    playerTotal += crystalValue;
+    console.log('Crystal ID is ' + $(this).attr('id'))
+    playerTotal += parseInt($(this).val());
+    $('#playerTotal').text(playerTotal);
 };
 
 function playerWin() {
@@ -36,8 +41,8 @@ function playerLose() {
 };
 
 function win() {
-    
-}
+
+};
 
 function newCrystals() {
     crystalArray: [];
@@ -48,8 +53,9 @@ function newCrystals() {
             crystalArray.push(randNum)
         };
     };
-    $('.crystal-1').val(crystalArray[0]);
-    $('.crystal-2').val(crystalArray[1]);
-    $('.crystal-3').val(crystalArray[2]);
-    $('.crystal-4').val(crystalArray[3]);
+
+    $('#crystal-1').val(crystalArray[0]);
+    $('#crystal-2').val(crystalArray[1]);
+    $('#crystal-3').val(crystalArray[2]);
+    $('#crystal-4').val(crystalArray[3]);
 };
