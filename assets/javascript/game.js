@@ -14,7 +14,9 @@ window.onload = function () { // start game
             console.log($(this).val());
             crystalClick(crystal);
             $('#playerTotal').text(playerTotal);
+            
             console.log(playerTotal < goalNumber)
+            
             if (playerTotal === goalNumber) {
                 alert(`You Win!`);
                 newCrystals();
@@ -25,9 +27,10 @@ window.onload = function () { // start game
             }
         }
     });
+    $('.startGame').on('click', function(){newCrystals();});
+    
 };
 
-// $('#startGame').on('click', newCrystals());
 // Functions
 
 function crystalClick(v) {
@@ -36,14 +39,19 @@ function crystalClick(v) {
 };
 
 function newCrystals() {
-    crystalArray: [];
-
+    crystalArray = [];
+    goalNumber = Math.floor(19 + Math.random() * 101);
+    
+    $('.goalTotal').text(goalNumber);
+    $('.playerTotal').text(playerTotal);
+    
     while (crystalArray.length < 4) {
         let randNum = Math.floor(1 + Math.random() * 11);
         if (!crystalArray.includes(randNum)) {
             crystalArray.push(randNum)
         };
     };
+    
     $('#goalTotal').text(goalNumber);
     $('#playerTotal').text(0);
     $('#crystal-1').val(crystalArray[0]);
