@@ -8,6 +8,11 @@ var chime = new Audio('./assets/sounds/chime.mp3')
 
 window.onload = function () { // start game
     newCrystals();
+    $('.btn').hide();
+    $('#instructions').on('click', function() {
+        $('.btn').show();
+        $('#instructions').hide();
+    })
     console.log(crystalArray);
     
     $('.crystal').on('click', function() {

@@ -1,0 +1,41 @@
+
+Todo:
+  ☐ Built HTML
+    ✔ create wireframe for crystal game @done(18-06-04 16:52)
+    ☐ create instructions popup
+      ☐ onclick hide
+    ✘ set up media query for tablet @cancelled(18-06-05 14:37)
+    ✔ set up media query for phone @done(18-06-05 14:37)
+    ✔ transition new game button @done(18-06-05 14:37)
+      ✔ 4 crystal pictures @done(18-06-04 16:52)
+        ✘ animate button click @cancelled(18-06-05 14:37)
+        ✘ randomize pictures @cancelled(18-06-05 14:37)
+  Crystal Game
+  Additional modes
+    ☐ Race Mode
+    ☐ Easy Mode
+    ☐ 12 Crystal Mode
+    Code requireemnts
+      ✔ Functions @done(18-06-05 14:37)
+        ✔ assign crystal value @done(18-05-31 13:35)
+        ✘ win @cancelled(18-06-04 10:50)
+        ✘ loss @cancelled(18-06-04 10:50)
+        ✔ click crystal @done(18-06-04 10:50)
+
+      ✔ assign number player must reach @done(18-05-31 12:32)
+      ✔ create variables @done(18-06-05 14:37)
+        ✔ goal number @done(18-05-31 12:23)
+        ✔ player total @done(18-05-31 12:23)
+        ✔ total wins @done(18-05-31 12:23)
+        ✔ total losses @done(18-05-31 12:23)
+        ✔ 4 crystals @done(18-05-31 12:34)
+          ✔ `random number 1 - 12 for each` @done(18-05-31 13:35)
+          ✔ `use crystalArray.includes(rand) to filter out numbers used` @done(18-05-31 13:35)
+          ✔ `assign to <element value='#'>` @done(18-06-05 14:37)
+          ✘ `possibly make an array with 4 length. push values to index?` @cancelled(18-05-31 13:35)
+      ☐ decide on logic
+        ✔ `while playerTotal < goalNumber, do everything` @done(18-06-01 10:15)
+        ✔ `on click add crystal value to player total` @done(18-06-04 10:50)
+        ✔ change game start to HTML button @done(18-06-05 14:37)
+        ✔ `if playerTotal === goalNumber then win, run initialization function` @done(18-06-05 14:37)
+        ✔ `if playerTotal > goalNumber then lose, run initialization function` @done(18-06-05 14:37)
