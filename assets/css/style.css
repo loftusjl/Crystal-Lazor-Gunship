@@ -46,4 +46,12 @@ body {
     50% { background-color: #00aeffec; -webkit-box-shadow: 0 0 18px #11a6fce8; }
     to { background-color: #0624cee8; -webkit-box-shadow: 0 0 9px #0423d1de; }
   }
-/* * {border: 1px solid red;} */
+
+  /* Portrait and Landscape */
+@media screen and (max-width: 548px) {
+    .crystal img {
+        width: 100px;
+    }
+}
+
+* {border: 1px solid red;}
