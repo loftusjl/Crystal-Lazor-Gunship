@@ -3,6 +3,7 @@ var playerTotal = 0;
 var wins = 0;
 var losses = 0;
 var crystalArray = [];
+var audio = new Audio('./assets/sounds/y2mate.com - ber_the_night_begins_to_shine_teen_titans_go_official_music_iwqtKlwJjgc.mp3')
 
 window.onload = function () { // start game
     newCrystals();
@@ -42,6 +43,7 @@ window.onload = function () { // start game
         $('#losses').text(losses);
         $('#wins').text(wins);
         newCrystals();
+        audio.play();
     });
 };
 
