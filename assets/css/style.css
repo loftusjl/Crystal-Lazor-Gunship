@@ -29,8 +29,10 @@ body {
     background-color: rgba(0, 123, 255, .61);
 }
 .glow {
-    -webkit-filter: drop-shadow(0px 0px 15px #7AF1F7);
+    -webkit-filter: drop-shadow(0px 0px 15px rgb(46, 35, 6));
     filter:         drop-shadow(0px 0px 15px #7AF1F7); 
 }
+media query screen max-width: 648px {
 
+}
 /* * {border: 1px solid red;} */

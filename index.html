@@ -42,32 +42,38 @@
     <!-- Content -->
     <content>
         <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-sm-2 h4">wins</div>
-                <div id="gameTotals" class="col-sm-8 justify-content-center">
-                    <span id="playerTotal" class="h2"></span> <h3>/</h3> <span id="goalTotal" class="h2"></span>
+            <div class="row justify-content-center text-center d-flex flex-row mt-5">
+                <div class="flex-fill h4 d-flex flex-column">
+                    <span class="mt-1">wins</span>
+                    <span id="wins">0</span>
                 </div>
-                <div class="col-sm-2 h4">losses</div>
-            </div>
-            <div class="row justify-content-center my-5">
-                <div class="d-flex flex-row flex-wrap p-5 justify-content-center">
-                    <button id="crystal-1" class="btn crystal shadowed glow" value="">
-                        <img class="img-fluid" src="./assets/images/Crystal-1.png" alt="picture of crystal-1">
-                    </button>
-                    <button id="crystal-2" class="btn crystal shadowed glow" value="">
-                        <img class="img-fluid" src="./assets/images/Crystal-2.png" alt="picture of crystal-2">
-                    </button>
-                    <button id="crystal-3" class="btn crystal shadowed glow" value="">
-                        <img class="img-fluid" src="./assets/images/Crystal-3.png" alt="picture of crystal-3">
-                    </button>
-                    <button id="crystal-4" class="btn crystal shadowed glow" value="">
-                        <img class="img-fluid" src="./assets/images/Crystal-4.png" alt="picture of crystal-4">
-                    </button>
+                <div id="gameTotals" class="justify-content-center p-1 d-flex flex-row flex-fill">
+                    <span id="playerTotal" class="h2"></span> <h2>/</h2> <span id="goalTotal" class="h2"></span>
+                </div>
+                <div class="flex-fill h4 d-flex flex-column">
+                    <span class="mt-1">losses</span>
+                    <span id="losses">0</span>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-12 flex-grow-1 d-flex">
-                    <button id="startGame" class="btn startGame flex-grow-1 glow">Next Game</button>
+            <div class="d-flex flex-column justify-content-center">
+                <div class="row justify-content-center my-2">
+                    <div class="d-flex flex-row flex-wrap p-2 justify-content-center">
+                        <button id="crystal-1" class="btn crystal shadowed glow" value="">
+                            <img class="img-fluid" src="./assets/images/Crystal-1.png" alt="picture of crystal-1">
+                        </button>
+                        <button id="crystal-2" class="btn crystal shadowed glow" value="">
+                            <img class="img-fluid" src="./assets/images/Crystal-2.png" alt="picture of crystal-2">
+                        </button>
+                        <button id="crystal-3" class="btn crystal shadowed glow" value="">
+                            <img class="img-fluid" src="./assets/images/Crystal-3.png" alt="picture of crystal-3">
+                        </button>
+                        <button id="crystal-4" class="btn crystal shadowed glow" value="">
+                            <img class="img-fluid" src="./assets/images/Crystal-4.png" alt="picture of crystal-4">
+                        </button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                        <button id="startGame" class="btn startGame glow">Next Game</button>
                 </div>
             </div>
         </div>

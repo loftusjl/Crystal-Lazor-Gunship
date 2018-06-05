@@ -18,10 +18,14 @@ window.onload = function () { // start game
             console.log(playerTotal < goalNumber)
             
             if (playerTotal === goalNumber) {
+                wins++;
+                $('#wins').text(wins);
                 alert(`You Win!`);
                 newCrystals();
             } 
             else if (playerTotal > goalNumber) {
+                losses++;
+                $('#losses').text(losses);
                 alert(`You Lose!`);
                 newCrystals();
             }
