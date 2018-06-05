@@ -7,8 +7,6 @@ var crystalArray = [];
 window.onload = function () { // start game
     newCrystals();
     console.log(crystalArray);
-    $('#goalTotal').text(goalNumber);
-    $('#playerTotal').text(0);
     
     $('.crystal').on('click', function() {
         if (playerTotal < goalNumber) {
@@ -29,6 +27,7 @@ window.onload = function () { // start game
     });
 };
 
+// $('#startGame').on('click', newCrystals());
 // Functions
 
 function crystalClick(v) {
@@ -45,7 +44,8 @@ function newCrystals() {
             crystalArray.push(randNum)
         };
     };
-
+    $('#goalTotal').text(goalNumber);
+    $('#playerTotal').text(0);
     $('#crystal-1').val(crystalArray[0]);
     $('#crystal-2').val(crystalArray[1]);
     $('#crystal-3').val(crystalArray[2]);

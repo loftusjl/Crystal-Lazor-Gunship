@@ -21,9 +21,14 @@ body {
 }
 .crystal img {
     max-width: 150px;
-    -webkit-filter: drop-shadow(0px 0px 15px #7AF1F7);
-    filter:         drop-shadow(0px 0px 15px #7AF1F7); 
 }
 .crystal {
     background-color:transparent;
+}
+.startGame {
+    background-color: rgba(0, 123, 255, .61);
+}
+.glow {
+    -webkit-filter: drop-shadow(0px 0px 15px #7AF1F7);
+    filter:         drop-shadow(0px 0px 15px #7AF1F7); 
 }
