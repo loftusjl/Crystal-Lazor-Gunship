@@ -11,7 +11,7 @@ window.onload = function () { // start game
     $('.crystal').on('click', function() {
         if (playerTotal < goalNumber) {
             var crystal = parseInt($(this).val());
-            console.log($(this).val());
+            console.log($(this).attr('id') + ': ' + $(this).val()); // cheat and show what the value is.
             crystalClick(crystal);
             $('#playerTotal').text(playerTotal);
             
@@ -31,8 +31,18 @@ window.onload = function () { // start game
             }
         }
     });
-    $('.startGame').on('click', function(){newCrystals();});
-    
+    $('#forfeitGame').on('click', function(){
+        losses++;
+        $('#losses').text(losses);
+        newCrystals();
+    });
+    $('#restartGame').on('click', function() {
+        losses = 0;
+        wins = 0;
+        $('#losses').text(losses);
+        $('#wins').text(wins);
+        newCrystals();
+    });
 };
 
 // Functions
@@ -45,9 +55,7 @@ function crystalClick(v) {
 function newCrystals() {
     crystalArray = [];
     goalNumber = Math.floor(19 + Math.random() * 101);
-    
-    $('.goalTotal').text(goalNumber);
-    $('.playerTotal').text(playerTotal);
+    playerTotal = 0;
     
     while (crystalArray.length < 4) {
         let randNum = Math.floor(1 + Math.random() * 11);
@@ -55,6 +63,7 @@ function newCrystals() {
             crystalArray.push(randNum)
         };
     };
+    console.log(crystalArray);
     
     $('#goalTotal').text(goalNumber);
     $('#playerTotal').text(0);
