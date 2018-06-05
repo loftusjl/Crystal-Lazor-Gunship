@@ -15,7 +15,9 @@ body {
 .subtitle {
     color: #F709F3;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    text-shadow: 4px 3px 2px rgba(0, 0, 0, .5);
+    -webkit-animation-name: pinkPulse;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
     font-weight: bold;
     font-family: 'Audiowide', cursive;
 }
@@ -26,13 +28,22 @@ body {
     background-color:transparent;
 }
 .gameControls {
-    background-color: rgba(0, 123, 255, .61);
+    -webkit-animation-name: bluePulse;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
 }
 .glow {
     -webkit-filter: drop-shadow(0px 0px 15px rgb(46, 35, 6));
     filter:         drop-shadow(0px 0px 15px #7AF1F7); 
 }
-media query screen max-width: 648px {
-
-}
+@-webkit-keyframes pinkPulse {
+    from {text-shadow: 4px 3px 2px #850382;}
+    50% { text-shadow: 6px 6px 6px #05b0ff; }
+    to { text-shadow: 4px 3px 2px #850382;}
+  }
+@-webkit-keyframes bluePulse {
+    from { background-color: #0011ffd5; -webkit-box-shadow: 0 0 9px #0026ffb6; }
+    50% { background-color: #00aeffec; -webkit-box-shadow: 0 0 18px #11a6fce8; }
+    to { background-color: #0624cee8; -webkit-box-shadow: 0 0 9px #0423d1de; }
+  }
 /* * {border: 1px solid red;} */
