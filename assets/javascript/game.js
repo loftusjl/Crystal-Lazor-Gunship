@@ -3,7 +3,8 @@ var playerTotal = 0;
 var wins = 0;
 var losses = 0;
 var crystalArray = [];
-var audio = new Audio('./assets/sounds/y2mate.com - ber_the_night_begins_to_shine_teen_titans_go_official_music_iwqtKlwJjgc.mp3')
+var bgMusic = new Audio('./assets/sounds/fighttosurvive.mp3')
+var chime = new Audio('./assets/sounds/chime.mp3')
 
 window.onload = function () { // start game
     newCrystals();
@@ -43,8 +44,9 @@ window.onload = function () { // start game
         $('#losses').text(losses);
         $('#wins').text(wins);
         newCrystals();
-        audio.play();
     });
+    $('#playMusic').on('click', function() {bgMusic.play();});
+    $('#pauseMusic').on('click', function() {bgMusic.pause();});
 };
 
 // Functions
@@ -52,6 +54,7 @@ window.onload = function () { // start game
 function crystalClick(v) {
     playerTotal += v;
     $('#playerTotal').text(playerTotal);
+    chime.play();
 };
 
 function newCrystals() {
