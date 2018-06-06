@@ -10,6 +10,10 @@ window.onload = function () { // start game
     $('.btn').hide();
     newCrystals();
     $('#instructions').on('click', function() {
+        bgMusic.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
         bgMusic.play();
         $('.btn').show();
         $('#instructions').hide();
@@ -52,16 +56,14 @@ window.onload = function () { // start game
         newCrystals();
     });
     $('#pauseMusic').on('click', function() {bgMusic.pause();});
+    
 };
-
 // Functions
-
 function crystalClick(v) {
     playerTotal += v;
     $('#playerTotal').text(playerTotal);
     chime.play();
 };
-
 function newCrystals() {
     crystalArray = [];
     goalNumber = Math.floor(19 + Math.random() * 101);
