@@ -4,6 +4,7 @@ var wins = 0;
 var losses = 0;
 var crystalArray = [];
 var bgMusic = new Audio('./assets/sounds/fighttosurvive.mp3')
+var bgMusicPlaying = true;
 var chime = new Audio('./assets/sounds/chime.mp3')
 
 window.onload = function () { // start game
@@ -55,8 +56,16 @@ window.onload = function () { // start game
         $('#wins').text(wins);
         newCrystals();
     });
-    $('#pauseMusic').on('click', function() {bgMusic.pause();});
-    
+    $('#pauseMusic').on('click', function() {
+        if (bgMusicPlaying === true) {
+            bgMusic.pause();
+            bgMusicPlaying = false;
+        }
+        else {
+            bgMusic.play();
+            bgMusicPlaying = true;
+        }
+        });
 };
 // Functions
 function crystalClick(v) {
