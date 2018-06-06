@@ -7,9 +7,10 @@ var bgMusic = new Audio('./assets/sounds/fighttosurvive.mp3')
 var chime = new Audio('./assets/sounds/chime.mp3')
 
 window.onload = function () { // start game
-    newCrystals();
     $('.btn').hide();
+    newCrystals();
     $('#instructions').on('click', function() {
+        bgMusic.play();
         $('.btn').show();
         $('#instructions').hide();
     })
@@ -50,7 +51,6 @@ window.onload = function () { // start game
         $('#wins').text(wins);
         newCrystals();
     });
-    $('#playMusic').on('click', function() {bgMusic.play();});
     $('#pauseMusic').on('click', function() {bgMusic.pause();});
 };
 

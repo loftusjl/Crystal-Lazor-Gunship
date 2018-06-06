@@ -1,10 +1,3 @@
-/* Colors
-Magenta: #F709F3
-Purple-Dark: 2B0D27
-Red: #EA2030
-Teal: #5AFDFF
-font-family: 'Audiowide', cursive;
-*/
 body {
     background-image: url('../images/retrowave_80_s_bg_by_rafael_de_jongh-d9wsq5j.png');
     background-repeat: no-repeat;
@@ -28,6 +21,9 @@ body {
     -webkit-animation-name: instructionPulse;
     -webkit-animation-duration: 6s;
     -webkit-animation-iteration-count: infinite;
+  }
+  .instructions {
+    width: 50rem;
   }
 .subtitle {
     color: #F709F3;
@@ -75,6 +71,16 @@ body {
 @media screen and (max-width: 548px) {
     .crystal img {
         width: 100px;
+    }
+}
+@media screen and (max-width: 830px) {
+    .instructions {
+max-width: 30rem;        
+    }
+}
+@media screen and (max-width: 500px) {
+    .instructions {
+max-width: 20rem;        
     }
 }
 
