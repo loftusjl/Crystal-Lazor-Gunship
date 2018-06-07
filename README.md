@@ -10,10 +10,6 @@ Each game, your crystals receive a random value. Click a crystal and try to reme
 
 * [Visual Studio Code](https://code.visualstudio.com/) - The text editor used.
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Authors
 
-* **Jesse Loftus** - *JLL* - [PurpleBooth](https://github.com/LoftusJL)
+* **Jesse Loftus** - *JLL* - [LoftusJL](https://github.com/LoftusJL)
