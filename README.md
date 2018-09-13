@@ -1,6 +1,6 @@
 # Crystal Lazor Gunship!
 
-Assignment for UCSD Extension Coding Bootcamp. 
+80's awesomeness and maths! 
 
 ## Getting Started
 
