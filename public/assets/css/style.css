@@ -1,0 +1,98 @@
+body {
+    background-image: url('../images/retrowave_80_s_bg_by_rafael_de_jongh-d9wsq5j.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+.popup{
+    position:fixed;
+    left:50%;
+    top: 25%;
+    z-index: 1;
+  }
+  .popup .wrapper{
+    position:relative; 
+    left:-50%;
+    color: #00ff88f3;
+    background-color:#107688;
+    border: 5px solid  #00ff88f3;
+    border-radius: 50px;
+    -webkit-animation-name: instructionPulse;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+  }
+  .instructions {
+    width: 50rem;
+  }
+.subtitle {
+    color: #F709F3;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+    font-family: 'Audiowide', cursive;
+}
+.crystal img {
+    max-width: 150px;
+    opacity: .85;
+}
+.crystal img:hover {
+    opacity: 1;
+}
+
+.crystal {
+    background-color:transparent;
+}
+.gameControls {
+    -webkit-animation-name: bluePulse;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+}
+.glow {
+    -webkit-animation-name: crystalPulse;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+.pinkPulseText {
+    -webkit-animation-name: pinkPulse;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes pinkPulse {
+    from {text-shadow: 4px 3px 2px #850382;}
+    50% { text-shadow: 6px 6px 6px #05b0ff; }
+    to { text-shadow: 4px 3px 2px #850382;}
+  }
+@-webkit-keyframes crystalPulse {
+    from {filter: drop-shadow(0px 0px 15px #850382); -webkit-filter: drop-shadow(0px 0px 15px #850382);}
+    50% { filter: drop-shadow(0px 0px 15px #05b0ff); -webkit-filter: drop-shadow(0px 0px 15px #05b0ff); }
+    to { filter: drop-shadow(0px 0px 15px #850382); -webkit-filter: drop-shadow(0px 0px 15px #850382);}
+  }
+@-webkit-keyframes bluePulse {
+    from { background-color: #0011ffd5; -webkit-box-shadow: 0 0 9px #0026ffb6; }
+    50% { background-color: #00aeffec; -webkit-box-shadow: 0 0 18px #11a6fce8; }
+    to { background-color: #0624cee8; -webkit-box-shadow: 0 0 9px #0423d1de; }
+  }
+@-webkit-keyframes instructionPulse {
+    from {-webkit-box-shadow: 0 0 25px #0026ffb6; }
+    50% {-webkit-box-shadow: 0 0 50px #00ff88f3; }
+    to {-webkit-box-shadow: 0 0 25px #0423d1de; }
+  }
+
+  /* Portrait and Landscape */
+@media screen and (max-width: 548px) {
+    .crystal img {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 830px) {
+    .instructions {
+max-width: 30rem;        
+    }
+}
+@media screen and (max-width: 500px) {
+    .instructions {
+max-width: 20rem;        
+    }
+}
+
+/* * {border: 1px solid red;} */
