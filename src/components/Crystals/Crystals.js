@@ -2,13 +2,8 @@ import React from 'react';
 import Crystal from './Crystal';
 
 function Crystals(props) {
-  return (
-    <div>
-      <Crystal />
-      <Crystal />
-      <Crystal />
-      <Crystal />
-    </div>
-  );
+  props.vals.forEach((elem, index) => {
+    return <Crystal id={index} value={elem} />;
+  });
 }
 export default Crystals;
