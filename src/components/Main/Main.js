@@ -7,15 +7,25 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      wins: 6,
-      losses: 2,
+      wins: 0,
+      losses: 0,
       target: 0,
-      current: 8,
+      current: 0,
       crystalValues: []
     };
   }
   componentDidMount() {
     this.setState({ target: Math.floor(19 + Math.random() * 101) });
+  }
+  checkWinCondition() {
+    const { wins, losses, target, current } = this.state;
+    if (current === target) {
+      this.setState({ wins: wins + 1 });
+      console.log('you win');
+    } else if (current > target) {
+      this.setState({ losses: losses + 1 });
+      console.log('you lose');
+    }
   }
 
   numberGenerator = function(arr) {
@@ -27,10 +37,15 @@ class Main extends Component {
     this.numberGenerator(arr);
   };
 
-  crystalClick = e => {
-    this.setState({
-      current: this.state.current + parseInt(e.target.dataset.value)
-    });
+  crystalClick = async e => {
+    try {
+      await this.setState({
+        current: this.state.current + parseInt(e.target.dataset.value)
+      });
+      await this.checkWinCondition();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
