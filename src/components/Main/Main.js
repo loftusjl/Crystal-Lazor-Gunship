@@ -39,10 +39,12 @@ class Main extends Component {
 
   crystalClick = async e => {
     try {
-      await this.setState({
-        current: this.state.current + parseInt(e.target.dataset.value)
-      });
-      await this.checkWinCondition();
+      if (this.state.current < this.state.target) {
+        await this.setState({
+          current: this.state.current + parseInt(e.target.dataset.value)
+        });
+        await this.checkWinCondition();
+      }
     } catch (error) {
       console.log(error);
     }
