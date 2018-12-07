@@ -27,6 +27,12 @@ class Main extends Component {
     this.numberGenerator(arr);
   };
 
+  crystalClick = e => {
+    this.setState({
+      current: this.state.current + parseInt(e.target.dataset.value)
+    });
+  };
+
   render() {
     this.numberGenerator(this.state.crystalValues);
     return (
@@ -39,7 +45,7 @@ class Main extends Component {
           current={this.state.current}
         />
         {console.log(this.state)}
-        <Crystals vals={this.state.crystalValues} />
+        <Crystals onClick={this.crystalClick} vals={this.state.crystalValues} />
       </div>
     );
   }

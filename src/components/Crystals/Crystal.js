@@ -5,7 +5,8 @@ function Crystal(props) {
     <img
       src={`./assets/images/Crystal-${props.src}.png`}
       alt="Crystal"
-      value={props.value}
+      data-value={props.value}
+      onClick={props.onClick}
     />
   );
 }
