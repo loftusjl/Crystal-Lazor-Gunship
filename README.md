@@ -1,6 +1,6 @@
 # Crystal Lazor Gunship!
 
-80's awesomeness and maths! 
+An old project that I'm looking to build better with even more 80's awesomeness and maths! 
 
 ## Getting Started
 
